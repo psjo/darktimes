@@ -90,15 +90,15 @@
 <entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="26" pc="268437758" symbol="onSettingsChanged"/>
 <entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="27" pc="268437762" symbol="onSettingsChanged"/>
 <entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="28" pc="268437778" symbol="onSettingsChanged"/>
-<entry filename="Rez" lineNum="38" pc="268437795" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="40" pc="268437799" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="41" pc="268437962" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="42" pc="268437987" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="43" pc="268438039" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="46" pc="268438085" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="39" pc="268437795" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="41" pc="268437799" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="42" pc="268437962" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="43" pc="268437987" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="44" pc="268438039" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="47" pc="268438085" symbol="WatchFace"/>
 </pcToLineNum>
 <symbolTable>
-<entry field="true" id="33" symbol="timeOnCol"/>
+<entry field="true" id="34" symbol="timeOnCol"/>
 <entry id="8389124" method="true" symbol="onUpdate"/>
 <entry field="true" id="15" symbol="appVersion"/>
 <entry id="8389349" symbol="justification"/>
@@ -109,8 +109,8 @@
 <entry id="8388770" module="true" symbol="Strings"/>
 <entry field="true" id="27" symbol="showCount"/>
 <entry field="true" id="20" symbol="redCol"/>
-<entry id="49" method="true" symbol="drawBat"/>
-<entry field="true" id="34" symbol="blackCol"/>
+<entry id="50" method="true" symbol="drawBat"/>
+<entry field="true" id="35" symbol="blackCol"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
 <entry id="8389377" method="true" symbol="onExitSleep"/>
 <entry field="true" id="31" symbol="timeOffCol"/>
@@ -123,48 +123,49 @@
 <entry field="true" id="24" symbol="AppName"/>
 <entry field="true" id="10" symbol="view"/>
 <entry id="8389375" method="true" symbol="WatchFace"/>
-<entry field="true" id="39" symbol="batFont"/>
-<entry field="true" id="45" symbol="alarmCol"/>
+<entry field="true" id="40" symbol="batFont"/>
+<entry field="true" id="46" symbol="alarmCol"/>
 <entry field="true" id="22" symbol="orangeCol"/>
 <entry field="true" id="13" symbol="LauncherIcon"/>
-<entry id="48" method="true" symbol="drawTime"/>
+<entry id="49" method="true" symbol="drawTime"/>
 <entry field="true" id="29" symbol="ltgrayCol"/>
 <entry id="8389683" method="true" symbol="onSettingsChanged"/>
 <entry id="8389281" method="true" symbol="onStop"/>
-<entry field="true" id="38" symbol="timeFont"/>
-<entry field="true" id="35" symbol="loadSettings"/>
+<entry field="true" id="39" symbol="timeFont"/>
+<entry field="true" id="36" symbol="loadSettings"/>
 <entry id="8389065" symbol="locY"/>
 <entry id="8389064" symbol="locX"/>
 <entry id="8388771" module="true" symbol="Drawables"/>
 <entry id="8389122" method="true" symbol="onLayout"/>
-<entry field="true" id="37" symbol="dateFont"/>
-<entry id="46" method="true" symbol="drawMsg"/>
+<entry field="true" id="38" symbol="dateFont"/>
+<entry id="47" method="true" symbol="drawMsg"/>
 <entry id="8389279" method="true" symbol="onStart"/>
 <entry field="true" id="17" symbol="whiteCol"/>
-<entry field="true" id="44" symbol="batWarningCol"/>
+<entry field="true" id="45" symbol="batWarningCol"/>
 <entry id="8389376" method="true" symbol="onEnterSleep"/>
 <entry id="8389348" symbol="font"/>
 <entry id="8389347" symbol="color"/>
 <entry field="true" id="28" symbol="btCol"/>
 <entry id="8" object="true" symbol="darktimesView"/>
+<entry field="true" id="33" symbol="colPrompt"/>
 <entry id="12" module="true" symbol="Layouts"/>
-<entry field="true" id="43" symbol="batWarning"/>
+<entry field="true" id="44" symbol="batWarning"/>
 <entry id="8389125" method="true" symbol="onHide"/>
 <entry field="true" id="26" symbol="bgCol"/>
-<entry id="50" method="true" symbol="getSettings"/>
-<entry field="true" id="42" symbol="on"/>
+<entry id="51" method="true" symbol="getSettings"/>
+<entry field="true" id="43" symbol="on"/>
 <entry field="true" id="18" symbol="appName"/>
 <entry id="8389063" symbol="identifier"/>
 <entry field="true" id="30" symbol="promptCol"/>
 <entry field="true" id="21" symbol="pinkCol"/>
 <entry field="true" id="25" symbol="showBat"/>
 <entry id="11" module="true" symbol="Menus"/>
-<entry field="true" id="36" symbol="countFont"/>
+<entry field="true" id="37" symbol="countFont"/>
 <entry field="true" id="19" symbol="greenCol"/>
-<entry field="true" id="40" symbol="w"/>
+<entry field="true" id="41" symbol="w"/>
 <entry id="8388772" module="true" symbol="Fonts"/>
-<entry field="true" id="41" symbol="h"/>
-<entry id="47" method="true" symbol="drawBG"/>
+<entry field="true" id="42" symbol="h"/>
+<entry id="48" method="true" symbol="drawBG"/>
 </symbolTable>
 <localVars>
 <entry endPc="268436673" name="alarms" stackId="5" startPc="268435933"/>

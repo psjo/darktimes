@@ -10,8 +10,8 @@ class darktimesView extends Ui.WatchFace {
 	var loadSettings = true;
 	var countFont = Gfx.FONT_NUMBER_MEDIUM;
 	var dateFont = Gfx.FONT_SYSTEM_LARGE;
-	var timeFont; // = Gfx.FONT_NUMBER_THAI_HOT;
-	var batFont = Gfx.FONT_SYSTEM_LARGE; //MEDIUM; //NUMBER_MILD;
+	var timeFont;
+	var batFont = Gfx.FONT_SYSTEM_LARGE; //NUMBER_MILD;
 	var w;
 	var h;
 	var on = true;
@@ -19,7 +19,7 @@ class darktimesView extends Ui.WatchFace {
 	var showBat; // = false;
 	var batWarning = 15;
 	var batWarningCol; // = Gfx.COLOR_PINK;
-	var timeOnCol; // = Gfx.COLOR_WHITE;
+	var timeOnCol = Gfx.COLOR_WHITE;
 	var timeOffCol; // = Gfx.COLOR_BLACK;
 	var btCol; // = Gfx.COLOR_DK_GRAY;
 	var alarmCol; // = Gfx.COLOR_LT_GRAY;
@@ -81,7 +81,6 @@ class darktimesView extends Ui.WatchFace {
 			
 			if (msgs > 0) {
 		        dc.setColor(msgCol, Gfx.COLOR_TRANSPARENT);
-				//dc.fillRoundedRectangle((w >> 1) + 2, (h/3 << 1) + 6, (w >> 1) - 12, h/3, 8);
 				dc.fillRoundedRectangle((w >> 1) + 2, 3*h >> 2, (w >> 1) - 22, h >> 2, 8);
 
 				if (on && showCount) {
@@ -92,7 +91,6 @@ class darktimesView extends Ui.WatchFace {
 
 			if (alarms > 0){
 		        dc.setColor(alarmCol, Gfx.COLOR_TRANSPARENT);
-				//dc.fillRoundedRectangle( 10, (h/3 << 1) + 6, (w >> 1) - 12, h/3, 8);
 				dc.fillRoundedRectangle( w >> 2, 3*h >> 2, (w >> 2), h >> 2, 8);
 
 				if (on && showCount) {
@@ -103,10 +101,6 @@ class darktimesView extends Ui.WatchFace {
 
 	        dc.setColor(btCol, Gfx.COLOR_TRANSPARENT);
 			dc.fillRoundedRectangle( 19, 3*h/4, (w >> 2) - 22, h >> 2, 8);
-			//dc.fillCircle(w >> 1, h + 6, w >> 3);
-	        //dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
-	        //dc.setPenWidth(2);
-			//dc.drawCircle(w >> 1, h + 6, w >> 3);
 		}
 	}
 	    
@@ -124,12 +118,11 @@ class darktimesView extends Ui.WatchFace {
 
 		dc.drawText(w >> 1, h/9, dateFont, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
 		dc.drawText(w >> 1 - 4, h >> 2 + 11, timeFont, timeStr, Gfx.TEXT_JUSTIFY_CENTER); //h/4+6 for dincondensed113.fnt
-		//dc.drawText(w/2 - 4, h >> 2 + 11, timeFont, "23:52", Gfx.TEXT_JUSTIFY_CENTER); //h/4+6 for dincondensed113.fnt
     }
 
 	function drawBat(dc) {
 		
-		var bat = Sys.getSystemStats().battery;//.format("%d");
+		var bat = Sys.getSystemStats().battery;
 		var batStr = bat.format("%d").toString() + "%";
 
 		if (bat < batWarning) {
@@ -178,7 +171,5 @@ class darktimesView extends Ui.WatchFace {
 		if (tmp > 0 && tmp < 100) {
 			batWarning = tmp;
 		}
-		//Sys.println(str); //.format("%d"));
-
 	}
 }

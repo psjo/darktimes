@@ -11,7 +11,7 @@
 	<setting propertyKey="@Properties.countShow_prop" title="@Strings.showCount">
       	<settingConfig type="boolean" />
    	</setting>
-	<setting propertyKey="@Properties.bgCol_prop" title="@Strings.bgCol">
+	<setting propertyKey="@Properties.bgCol_prop" title="@Strings.bgCol" prompt="@Strings.colPrompt">
        	<settingConfig type="list">
            	<listEntry value="0x000000">@Strings.blackCol</listEntry>        
            	<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
@@ -23,7 +23,7 @@
            	<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry> 
        	</settingConfig>
 	</setting>
-	<setting propertyKey="@Properties.timeOnCol_prop" title="@Strings.timeOnCol">
+	<setting propertyKey="@Properties.timeOnCol_prop" title="@Strings.timeOnCol" prompt="@Strings.colPrompt">
        	<settingConfig type="list">
            	<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry> 
            	<listEntry value="0x000000">@Strings.blackCol</listEntry>        
@@ -35,7 +35,7 @@
            	<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>                        
        	</settingConfig>
 	</setting>
-	<setting propertyKey="@Properties.timeOffCol_prop" title="@Strings.timeOffCol">
+	<setting propertyKey="@Properties.timeOffCol_prop" title="@Strings.timeOffCol" prompt="@Strings.colPrompt">
        	<settingConfig type="list">
            	<listEntry value="0x000000">@Strings.blackCol</listEntry>        
            	<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry> 

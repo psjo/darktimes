@@ -2,9 +2,10 @@
     <string id="AppName">darktimes</string>
 	<string id="appName">Name</string>
 	<string id="appVersion">Version</string>
-	<string id="showBat">Show battery in sleep mode</string>
+	<string id="showBat">Show battery state in sleep mode</string>
 	<string id="showCount">Show message/alarm count when awake</string>
 	<string id="bgCol">Background color</string>
+	<string id="colPrompt">Pick a color</string>
 	<string id="timeOnCol">Color when awake (time/date)</string>
 	<string id="timeOffCol">Color when asleep (time/date)</string>
 	<string id="btCol">Bluetooth dot color</string>
