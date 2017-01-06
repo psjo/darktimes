@@ -1,0 +1,22 @@
+<strings>
+    <string id="AppName">darktimes</string>
+	<string id="appName">Name</string>
+	<string id="appVersion">Version</string>
+	<string id="showBat">Show battery in sleep mode</string>
+	<string id="showCount">Show message/alarm count when awake</string>
+	<string id="bgCol">Background color</string>
+	<string id="timeOnCol">Color when awake (time/date)</string>
+	<string id="timeOffCol">Color when asleep (time/date)</string>
+	<string id="btCol">Bluetooth dot color</string>
+	<string id="msgCol">Notification block color</string>
+	<string id="batWCol">Battery warning color</string>
+	<string id="blackCol">The black color</string>
+	<string id="whiteCol">The white color</string>
+	<string id="ltgrayCol">The light gray color</string>
+	<string id="dkgrayCol">The dark gray color</string>
+	<string id="pinkCol">The pink color</string>
+	<string id="redCol">The red color</string>
+	<string id="greenCol">The green color</string>
+	<string id="orangeCol">The orange color</string>
+	<string id="promptCol">Pick a color, please.</string>
+</strings>

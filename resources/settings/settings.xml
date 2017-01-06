@@ -1,0 +1,50 @@
+<settings>
+	<setting propertyKey="@Properties.appName" title="@Strings.appName">
+       	<settingConfig type="alphaNumeric" readonly="true" />
+   	</setting>
+	<setting propertyKey="@Properties.appVersion" title="@Strings.appVersion">
+      	<settingConfig type="alphaNumeric" readonly="true" />
+   	</setting>
+	<setting propertyKey="@Properties.batShow_prop" title="@Strings.showBat">
+      	<settingConfig type="boolean" />
+   	</setting>
+	<setting propertyKey="@Properties.countShow_prop" title="@Strings.showCount">
+      	<settingConfig type="boolean" />
+   	</setting>
+	<setting propertyKey="@Properties.bgCol_prop" title="@Strings.bgCol">
+       	<settingConfig type="list">
+           	<listEntry value="0x000000">@Strings.blackCol</listEntry>        
+           	<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+           	<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+           	<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+           	<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+           	<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+           	<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>                        
+           	<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry> 
+       	</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.timeOnCol_prop" title="@Strings.timeOnCol">
+       	<settingConfig type="list">
+           	<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry> 
+           	<listEntry value="0x000000">@Strings.blackCol</listEntry>        
+           	<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+           	<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+           	<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+           	<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+           	<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+           	<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>                        
+       	</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.timeOffCol_prop" title="@Strings.timeOffCol">
+       	<settingConfig type="list">
+           	<listEntry value="0x000000">@Strings.blackCol</listEntry>        
+           	<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry> 
+           	<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+           	<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+           	<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+           	<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+           	<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+           	<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>                        
+       	</settingConfig>
+	</setting>
+</settings>

@@ -1,0 +1,5 @@
+<resources>
+	<fonts>
+		<font filename="fonts/DINcondensed122.fnt" filter="1234567890:" id="id_theFont"></font>
+	</fonts>
+</resources>

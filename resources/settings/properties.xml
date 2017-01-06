@@ -1,0 +1,14 @@
+<properties>
+	<property id="appName" type="string">DarkTimes</property>
+	<property id="appVersion" type="string">1.0.1</property>
+	<property id="batWarn_prop" type="number">11</property>
+	<property id="bgCol_prop" type="number">0x000000</property>
+	<property id="timeOnCol_prop" type="number">0xFFFFFF</property>
+	<property id="timeOffCol_prop" type="number">0x000000</property>
+	<property id="btCol_prop" type="number">0x555555</property>
+	<property id="alarmCol_prop" type="number">0xAAAAAA</property>
+	<property id="msgCol_prop" type="number">0xFFFFFF</property>
+	<property id="batWCol_prop" type="number">0xFF00FF</property>
+	<property id="batShow_prop" type="boolean">false</property>
+	<property id="countShow_prop" type="boolean">false</property>
+</properties>
