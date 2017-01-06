@@ -160,16 +160,16 @@ class darktimesView extends Ui.WatchFace {
 			timeOnCol = col;
 		}
 		
-		timeOffCol = app.getProperty("timeOffCol_prop").toNumber();
+		timeOffCol = app.getProperty("timeOffCol_prop"); //.toNumber();
 		btCol = app.getProperty("btCol_prop"); //.toNumber();
 		alarmCol = app.getProperty("alarmCol_prop"); //.toNumber();
 		batWarningCol = app.getProperty("batWCol_prop"); //.toNumber();
 		msgCol = app.getProperty("msgCol_prop"); //.toLong();
-		showCount = app.getProperty("countShow_prop"); //.toLong();
-		showBat = app.getProperty("batShow_prop"); //.toLong();
+		showCount = app.getProperty("countShow_prop");
+		showBat = app.getProperty("batShow_prop");
 		var tmp = app.getProperty("batWarn_prop");
 		if (tmp > 0 && tmp < 100) {
-			batWarning = tmp;
+			batWarning = tmp; // defaults to 15
 		}
 	}
 }

@@ -1,50 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <settings>
 	<setting propertyKey="@Properties.appName" title="@Strings.appName">
-       	<settingConfig type="alphaNumeric" readonly="true" />
-   	</setting>
+		<settingConfig type="alphaNumeric" readonly="true" />
+	</setting>
 	<setting propertyKey="@Properties.appVersion" title="@Strings.appVersion">
-      	<settingConfig type="alphaNumeric" readonly="true" />
-   	</setting>
+		<settingConfig type="alphaNumeric" readonly="true" />
+	</setting>
+	<setting propertyKey="@Properties.bgCol_prop" title="@Strings.bgCol"
+		prompt="@Strings.colPrompt">
+		<settingConfig type="list">
+			<listEntry value="0x000000">@Strings.blackCol</listEntry>
+			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
+		</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.timeOnCol_prop" title="@Strings.timeOnCol"
+		prompt="@Strings.colPrompt">
+		<settingConfig type="list">
+			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
+			<listEntry value="0x000000">@Strings.blackCol</listEntry>
+			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+		</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.timeOffCol_prop" title="@Strings.timeOffCol"
+		prompt="@Strings.colPrompt">
+		<settingConfig type="list">
+			<listEntry value="0x000000">@Strings.blackCol</listEntry>
+			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
+			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+		</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.btCol_prop" title="@Strings.btCol"
+		prompt="@Strings.colPrompt">
+		<settingConfig type="list">
+			<listEntry value="0x000000">@Strings.blackCol</listEntry>
+			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
+			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+		</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.alarmCol_prop" title="@Strings.alarmCol"
+		prompt="@Strings.colPrompt">
+		<settingConfig type="list">
+			<listEntry value="0x000000">@Strings.blackCol</listEntry>
+			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
+			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+		</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.msgCol_prop" title="@Strings.msgCol"
+		prompt="@Strings.colPrompt">
+		<settingConfig type="list">
+			<listEntry value="0x000000">@Strings.blackCol</listEntry>
+			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
+			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+		</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.batWCol_prop" title="@Strings.batWCol"
+		prompt="@Strings.colPrompt">
+		<settingConfig type="list">
+			<listEntry value="0x000000">@Strings.blackCol</listEntry>
+			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
+			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+		</settingConfig>
+	</setting>
 	<setting propertyKey="@Properties.batShow_prop" title="@Strings.showBat">
-      	<settingConfig type="boolean" />
-   	</setting>
+		<settingConfig type="boolean" />
+	</setting>
+	<setting propertyKey="@Properties.batWarn_prop" title="@Strings.batWPrompt">
+		<settingConfig type="numeric" min="0" max="100"
+			errorMessage="@Strings.batValueError" />
+	</setting>
 	<setting propertyKey="@Properties.countShow_prop" title="@Strings.showCount">
-      	<settingConfig type="boolean" />
-   	</setting>
-	<setting propertyKey="@Properties.bgCol_prop" title="@Strings.bgCol" prompt="@Strings.colPrompt">
-       	<settingConfig type="list">
-           	<listEntry value="0x000000">@Strings.blackCol</listEntry>        
-           	<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
-           	<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-           	<listEntry value="0x0000FF">@Strings.redCol</listEntry>
-           	<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
-           	<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
-           	<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>                        
-           	<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry> 
-       	</settingConfig>
-	</setting>
-	<setting propertyKey="@Properties.timeOnCol_prop" title="@Strings.timeOnCol" prompt="@Strings.colPrompt">
-       	<settingConfig type="list">
-           	<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry> 
-           	<listEntry value="0x000000">@Strings.blackCol</listEntry>        
-           	<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
-           	<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-           	<listEntry value="0x0000FF">@Strings.redCol</listEntry>
-           	<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
-           	<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
-           	<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>                        
-       	</settingConfig>
-	</setting>
-	<setting propertyKey="@Properties.timeOffCol_prop" title="@Strings.timeOffCol" prompt="@Strings.colPrompt">
-       	<settingConfig type="list">
-           	<listEntry value="0x000000">@Strings.blackCol</listEntry>        
-           	<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry> 
-           	<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
-           	<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-           	<listEntry value="0x0000FF">@Strings.redCol</listEntry>
-           	<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
-           	<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
-           	<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>                        
-       	</settingConfig>
+		<settingConfig type="boolean" />
 	</setting>
 </settings>
