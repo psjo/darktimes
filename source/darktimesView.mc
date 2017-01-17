@@ -56,7 +56,7 @@ class darktimesView extends Ui.WatchFace {
             dc.setColor(timeOnCol, Gfx.COLOR_TRANSPARENT);
             drawTime(dc);
             drawBat(dc);
-        } else if (timeOffCol != Gfx.COLOR_BLACK) {
+        } else if (timeOffCol != bgCol) {
             dc.setColor(timeOffCol, Gfx.COLOR_TRANSPARENT);
             drawTime(dc);
             drawBat(dc);
@@ -140,12 +140,8 @@ class darktimesView extends Ui.WatchFace {
     function getSettings() {
         var app = App.getApp();
 
-        bgCol = app.getProperty("bgCol_prop").toNumber();
-        var col = app.getProperty("timeOnCol_prop").toNumber();
-
-        if (col != bgCol) {
-            timeOnCol = col;
-        }
+        bgCol = app.getProperty("bgCol_prop");
+        timeOnCol = app.getProperty("timeOnCol_prop");
 
         timeOffCol = app.getProperty("timeOffCol_prop");
         btCol = app.getProperty("btCol_prop");
