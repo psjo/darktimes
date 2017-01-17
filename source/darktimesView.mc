@@ -12,11 +12,12 @@ class darktimesView extends Ui.WatchFace {
     var dateFont = Gfx.FONT_SYSTEM_LARGE;
     var timeFont;
     var batFont = Gfx.FONT_SYSTEM_LARGE; //NUMBER_MILD;
-    var w;
-    var h;
+    var w, h; // width, height
+    var timedOn = 15, timedOff = 7; //
     var on = true;
     var showCount; // = false;
     var showBat; // = false;
+    var timed = true; //false;
     var batWarning = 15;
     var batWarningCol; // = Gfx.COLOR_PINK;
     var timeOnCol = Gfx.COLOR_WHITE;
@@ -58,6 +59,10 @@ class darktimesView extends Ui.WatchFace {
             drawBat(dc);
         } else if (timeOffCol != bgCol) {
             dc.setColor(timeOffCol, Gfx.COLOR_TRANSPARENT);
+            drawTime(dc);
+            drawBat(dc);
+        } else if (timed and (Sys.getClockTime().hour >= timedOn or Sys.getClockTime().hour <= timedOff)) {
+            dc.setColor(timeOnCol, Gfx.COLOR_TRANSPARENT);
             drawTime(dc);
             drawBat(dc);
         } else if (showBat) {
@@ -154,5 +159,8 @@ class darktimesView extends Ui.WatchFace {
         if (tmp > 0 && tmp < 100) {
             batWarning = tmp; // defaults to 15
         }
+        timed = app.getProperty("timed_prop");
+        timedOn = app.getProperty("timedOn_prop");
+        timedOff = app.getProperty("timedOff_prop");
     }
 }

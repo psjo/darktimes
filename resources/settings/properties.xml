@@ -11,4 +11,7 @@
 	<property id="batWCol_prop" type="number">0xFF00FF</property>
 	<property id="batShow_prop" type="boolean">false</property>
 	<property id="countShow_prop" type="boolean">false</property>
+	<property id="timed_prop" type="boolean">false</property>
+	<property id="timedOn_prop" type="number">23</property>
+	<property id="timedOff_prop" type="number">6</property>
 </properties>

@@ -121,4 +121,15 @@
 	<setting propertyKey="@Properties.countShow_prop" title="@Strings.showCount">
 		<settingConfig type="boolean" />
 	</setting>
+	<setting propertyKey="@Properties.timed_prop" title="@Strings.timed">
+		<settingConfig type="boolean" />
+	</setting>
+	<setting propertyKey="@Properties.timedOn_prop" title="@Strings.timedOn">
+		<settingConfig type="numeric" min="12" max="23"
+			errorMessage="@Strings.batValueError" />
+	</setting>
+	<setting propertyKey="@Properties.timedOff_prop" title="@Strings.timedOff">
+		<settingConfig type="numeric" min="0" max="11"
+			errorMessage="@Strings.batValueError" />
+	</setting>
 </settings>

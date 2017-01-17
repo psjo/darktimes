@@ -5,6 +5,9 @@
 	<string id="showBat">Show battery state in sleep mode</string>
 	<string id="batValueError">Between one (1) and one hundred (100), please</string>
 	<string id="showCount">Show message/alarm count when awake</string>
+	<string id="timed">Show time during period time on/off</string>
+	<string id="timedOn">Time to start showing the time in the afternoon/evening</string>
+	<string id="timedOff">Time to stop showing the time in the morning</string>
 	<string id="bgCol">Background color</string>
 	<string id="colPrompt">Pick a color</string>
 	<string id="timeOnCol">Color when awake (time/date)</string>
