@@ -12,7 +12,9 @@
 			<listEntry value="0x000000">@Strings.blackCol</listEntry>
 			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
 			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0xFF0000">@Strings.redCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.dkblueCol</listEntry>
+			<listEntry value="0x00AAFF">@Strings.blueCol</listEntry>
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
@@ -26,7 +28,9 @@
 			<listEntry value="0x000000">@Strings.blackCol</listEntry>
 			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
 			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0xFF0000">@Strings.redCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.dkblueCol</listEntry>
+			<listEntry value="0x00AAFF">@Strings.blueCol</listEntry>
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
@@ -39,7 +43,9 @@
 			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
 			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
 			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0xFF0000">@Strings.redCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.dkblueCol</listEntry>
+			<listEntry value="0x00AAFF">@Strings.blueCol</listEntry>
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
@@ -52,7 +58,9 @@
 			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
 			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
 			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0xFF0000">@Strings.redCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.dkblueCol</listEntry>
+			<listEntry value="0x00AAFF">@Strings.blueCol</listEntry>
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
@@ -65,7 +73,9 @@
 			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
 			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
 			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0xFF0000">@Strings.redCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.dkblueCol</listEntry>
+			<listEntry value="0x00AAFF">@Strings.blueCol</listEntry>
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
@@ -78,7 +88,9 @@
 			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
 			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
 			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0xFF0000">@Strings.redCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.dkblueCol</listEntry>
+			<listEntry value="0x00AAFF">@Strings.blueCol</listEntry>
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
@@ -91,7 +103,9 @@
 			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
 			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
 			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
-			<listEntry value="0x0000FF">@Strings.redCol</listEntry>
+			<listEntry value="0xFF0000">@Strings.redCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.dkblueCol</listEntry>
+			<listEntry value="0x00AAFF">@Strings.blueCol</listEntry>
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>

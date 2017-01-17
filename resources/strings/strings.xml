@@ -18,6 +18,8 @@
 	<string id="whiteCol">The white color</string>
 	<string id="ltgrayCol">The light gray color</string>
 	<string id="dkgrayCol">The dark gray color</string>
+	<string id="blueCol">The blue color</string>
+	<string id="dkblueCol">The dark blue color</string>
 	<string id="pinkCol">The pink color</string>
 	<string id="redCol">The red color</string>
 	<string id="greenCol">The green color</string>
