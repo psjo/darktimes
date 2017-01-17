@@ -11,4 +11,4 @@ Shows notifications.
 Shows time, date and battery % as well.
 
 ## Issues
-Supposed to be configurable. App settings editor not working in Eclipse.
+backlight doesn't bring watch face out of low power mode, crap.
