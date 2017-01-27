@@ -15,13 +15,14 @@ class darktimesView extends Ui.WatchFace {
     var w, h; // width, height
     var timedOn = 15, timedOff = 7; //
     var on = true;
+    var is24 = true;
     var showCount; // = false;
-    var showBat; // = false;
     var timed = true; //false;
     var batWarning = 15;
     var batWarningCol; // = Gfx.COLOR_PINK;
     var timeOnCol = Gfx.COLOR_WHITE;
     var timeOffCol; // = Gfx.COLOR_BLACK;
+    var timedCol; // = Gfx.COLOR_DK_GRAY;
     var btCol; // = Gfx.COLOR_DK_GRAY;
     var alarmCol; // = Gfx.COLOR_LT_GRAY;
     var bgCol; //Gfx.COLOR_BLACK;
@@ -61,13 +62,13 @@ class darktimesView extends Ui.WatchFace {
             dc.setColor(timeOffCol, Gfx.COLOR_TRANSPARENT);
             drawTime(dc);
             drawBat(dc);
-        } else if (timed and (Sys.getClockTime().hour >= timedOn or Sys.getClockTime().hour <= timedOff)) {
-            dc.setColor(timeOnCol, Gfx.COLOR_TRANSPARENT);
-            drawTime(dc);
-            drawBat(dc);
-        } else if (showBat) {
-            dc.setColor(timeOnCol, Gfx.COLOR_TRANSPARENT);
-            drawBat(dc);
+        } else if (timed) {
+            var h = Sys.getClockTime().hour;
+            if ((timedOn > timedOff and (h >= timedOn or h < timedOff)) or (timedOn < timedOff and (h >= timedOn and h < timedOff))) {
+                dc.setColor(timedCol, Gfx.COLOR_TRANSPARENT);
+                drawTime(dc);
+                drawBat(dc);
+            }
         }
     }
 
@@ -113,7 +114,12 @@ class darktimesView extends Ui.WatchFace {
 
     function drawTime(dc) {
         var now = Calendar.info(Time.now(), Time.FORMAT_MEDIUM);
-        var timeStr = Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]);
+        var timeStr;
+        if (is24 or now.hour < 13) {
+            timeStr = Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]);
+        } else {
+            timeStr = Lang.format("$1$:$2$", [(now.hour - 12).format("%02d"), now.min.format("%02d")]);
+        }
         var dateStr = Lang.format("$1$ $2$ $3$", [now.day_of_week.toUpper().substring(0, 3), now.day.format("%02d"), now.month.toUpper()]);
 
         dc.drawText(w >> 1, h/9, dateFont, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
@@ -143,6 +149,9 @@ class darktimesView extends Ui.WatchFace {
     }
 
     function getSettings() {
+        var settings = Sys.getDeviceSettings();
+        is24 = settings.is24Hour;
+
         var app = App.getApp();
 
         bgCol = app.getProperty("bgCol_prop");
@@ -154,12 +163,12 @@ class darktimesView extends Ui.WatchFace {
         batWarningCol = app.getProperty("batWCol_prop");
         msgCol = app.getProperty("msgCol_prop");
         showCount = app.getProperty("countShow_prop");
-        showBat = app.getProperty("batShow_prop");
         var tmp = app.getProperty("batWarn_prop");
         if (tmp > 0 && tmp < 100) {
             batWarning = tmp; // defaults to 15
         }
         timed = app.getProperty("timed_prop");
+        timedCol = app.getProperty("timedCol_prop");
         timedOn = app.getProperty("timedOn_prop");
         timedOff = app.getProperty("timedOff_prop");
     }

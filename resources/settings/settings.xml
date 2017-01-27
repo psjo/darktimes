@@ -111,9 +111,6 @@
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
 		</settingConfig>
 	</setting>
-	<setting propertyKey="@Properties.batShow_prop" title="@Strings.showBat">
-		<settingConfig type="boolean" />
-	</setting>
 	<setting propertyKey="@Properties.batWarn_prop" title="@Strings.batWPrompt">
 		<settingConfig type="numeric" min="0" max="100"
 			errorMessage="@Strings.batValueError" />
@@ -121,15 +118,31 @@
 	<setting propertyKey="@Properties.countShow_prop" title="@Strings.showCount">
 		<settingConfig type="boolean" />
 	</setting>
-	<setting propertyKey="@Properties.timed_prop" title="@Strings.timed">
+	<setting propertyKey="@Properties.timed_prop" title="@Strings.timed"
+		prompt="@Strings.timedPrompt">
 		<settingConfig type="boolean" />
 	</setting>
 	<setting propertyKey="@Properties.timedOn_prop" title="@Strings.timedOn">
-		<settingConfig type="numeric" min="12" max="23"
+		<settingConfig type="numeric" min="0" max="23"
 			errorMessage="@Strings.batValueError" />
 	</setting>
 	<setting propertyKey="@Properties.timedOff_prop" title="@Strings.timedOff">
-		<settingConfig type="numeric" min="0" max="11"
+		<settingConfig type="numeric" min="0" max="23"
 			errorMessage="@Strings.batValueError" />
+	</setting>
+	<setting propertyKey="@Properties.timedCol_prop" title="@Strings.timedCol"
+		prompt="@Strings.colPrompt">
+		<settingConfig type="list">
+			<listEntry value="0x000000">@Strings.blackCol</listEntry>
+			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
+			<listEntry value="0x555555">@Strings.dkgrayCol</listEntry>
+			<listEntry value="0xAAAAAA">@Strings.ltgrayCol</listEntry>
+			<listEntry value="0xFF0000">@Strings.redCol</listEntry>
+			<listEntry value="0x0000FF">@Strings.dkblueCol</listEntry>
+			<listEntry value="0x00AAFF">@Strings.blueCol</listEntry>
+			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
+			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
+			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+		</settingConfig>
 	</setting>
 </settings>
