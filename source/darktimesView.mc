@@ -40,7 +40,6 @@ class darktimesView extends Ui.WatchFace {
         w = dc.getWidth();
         h = dc.getHeight();
         timeFont = Ui.loadResource(Rez.Fonts.id_theFont);
-        setLayout(Rez.Layouts.WatchFace(dc));
     }
 
     function onShow() {
@@ -148,7 +147,7 @@ class darktimesView extends Ui.WatchFace {
 
     function drawBat(dc) {
         var bat = Sys.getSystemStats().battery;
-        var batStr = bat.format("%d") + "%"; //.toString() + "%";
+        var batStr = bat.format("%d") + "%";
 
         if (bat < batWarning) {
             dc.setColor(batWarningCol, Gfx.COLOR_TRANSPARENT);
