@@ -118,17 +118,23 @@
 	<setting propertyKey="@Properties.countShow_prop" title="@Strings.showCount">
 		<settingConfig type="boolean" />
 	</setting>
+	<setting propertyKey="@Properties.batShow_prop" title="@Strings.showBat">
+		<settingConfig type="boolean" />
+	</setting>
+	<setting propertyKey="@Properties.dateShow_prop" title="@Strings.showDate">
+		<settingConfig type="boolean" />
+	</setting>
 	<setting propertyKey="@Properties.timed_prop" title="@Strings.timed"
 		prompt="@Strings.timedPrompt">
 		<settingConfig type="boolean" />
 	</setting>
 	<setting propertyKey="@Properties.timedOn_prop" title="@Strings.timedOn">
 		<settingConfig type="numeric" min="0" max="23"
-			errorMessage="@Strings.batValueError" />
+			errorMessage="@Strings.timedValueError" />
 	</setting>
 	<setting propertyKey="@Properties.timedOff_prop" title="@Strings.timedOff">
 		<settingConfig type="numeric" min="0" max="23"
-			errorMessage="@Strings.batValueError" />
+			errorMessage="@Strings.timedValueError" />
 	</setting>
 	<setting propertyKey="@Properties.timedCol_prop" title="@Strings.timedCol"
 		prompt="@Strings.colPrompt">
@@ -144,5 +150,9 @@
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
 		</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.colonPos_prop" title="@Strings.colonPos">
+		<settingConfig type="numeric" min="0" max="46"
+			errorMessage="@Strings.colonValueError" />
 	</setting>
 </settings>

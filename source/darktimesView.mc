@@ -11,13 +11,16 @@ class darktimesView extends Ui.WatchFace {
     var countFont = Gfx.FONT_NUMBER_MEDIUM;
     var dateFont = Gfx.FONT_SYSTEM_LARGE;
     var timeFont;
-    var batFont = Gfx.FONT_SYSTEM_LARGE; //NUMBER_MILD;
+    var batFont = Gfx.FONT_SYSTEM_LARGE;
     var w, h; // width, height
-    var timedOn = 15, timedOff = 7; //
+    var timedOn;
+    var timedOff;
     var on = true;
     var is24 = true;
-    var showCount; // = false;
-    var timed = true; //false;
+    var showCount;
+    var showBat;
+    var showDate;
+    var timed = false;
     var batWarning = 15;
     var batWarningCol; // = Gfx.COLOR_PINK;
     var timeOnCol = Gfx.COLOR_WHITE;
@@ -27,12 +30,12 @@ class darktimesView extends Ui.WatchFace {
     var alarmCol; // = Gfx.COLOR_LT_GRAY;
     var bgCol; //Gfx.COLOR_BLACK;
     var msgCol; //Gfx.COLOR_WHITE;
+    var colonPos; // 0; // 0=bottom, 46=top
 
     function initialize() {
         WatchFace.initialize();
     }
 
-    // Load your resources here
     function onLayout(dc) {
         w = dc.getWidth();
         h = dc.getHeight();
@@ -43,13 +46,11 @@ class darktimesView extends Ui.WatchFace {
     function onShow() {
     }
 
-    // Update the view
     function onUpdate(dc) {
         if (loadSettings) {
             getSettings();
             loadSettings = false;
         }
-        // clear background and show messages/alarms
         drawBG(dc);
         drawMsg(dc);
 
@@ -61,13 +62,17 @@ class darktimesView extends Ui.WatchFace {
         } else if (timeOffCol != bgCol) {
             dc.setColor(timeOffCol, Gfx.COLOR_TRANSPARENT);
             drawTime(dc);
-            drawBat(dc);
+            if (showBat) {
+                drawBat(dc);
+            }
         } else if (timed) {
             var h = Sys.getClockTime().hour;
             if ((timedOn > timedOff and (h >= timedOn or h < timedOff)) or (timedOn < timedOff and (h >= timedOn and h < timedOff))) {
                 dc.setColor(timedCol, Gfx.COLOR_TRANSPARENT);
                 drawTime(dc);
-                drawBat(dc);
+                if (showBat) {
+                    drawBat(dc);
+                }
             }
         }
     }
@@ -81,29 +86,31 @@ class darktimesView extends Ui.WatchFace {
 
             var msgs = settings.notificationCount;
             var alarms = settings.alarmCount;
+            var pad = 0; // fenix...
+            if (h ^ w) { // fr230...
+                pad = 4;
+            }
 
             if (msgs > 0) {
                 dc.setColor(msgCol, Gfx.COLOR_TRANSPARENT);
-                dc.fillRoundedRectangle((w >> 1) + 2, 3*h >> 2, (w >> 1) - 22, h >> 2, 8);
-
+                dc.fillRoundedRectangle((w >> 1) + 2, 3*h >> 2 + pad, (w >> 1) - 22, h >> 2, 8);
                 if (on && showCount) {
                     dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
-                    dc.drawText((w >> 1) + (w >> 3), h/3 << 1 + 10, countFont, msgs.format("%d"), Gfx.TEXT_JUSTIFY_CENTER);
+                    dc.drawText((w >> 1) + (w >> 3), h/3 << 1 + 12, countFont, msgs.format("%d"), Gfx.TEXT_JUSTIFY_CENTER);
                 }
             }
 
             if (alarms > 0){
                 dc.setColor(alarmCol, Gfx.COLOR_TRANSPARENT);
-                dc.fillRoundedRectangle( w >> 2, 3*h >> 2, (w >> 2), h >> 2, 8);
-
+                dc.fillRoundedRectangle( w >> 2, 3*h >> 2 + pad, (w >> 2), h >> 2, 8);
                 if (on && showCount) {
                     dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
-                    dc.drawText((w >> 1) - (w >> 3), h/3 << 1 + 10, countFont, alarms.format("%d"), Gfx.TEXT_JUSTIFY_CENTER);
+                    dc.drawText((w >> 1) - (w >> 3), h/3 << 1 + 12, countFont, alarms.format("%d"), Gfx.TEXT_JUSTIFY_CENTER);
                 }
             }
 
             dc.setColor(btCol, Gfx.COLOR_TRANSPARENT);
-            dc.fillRoundedRectangle( 19, 3*h/4, (w >> 2) - 22, h >> 2, 8);
+            dc.fillRoundedRectangle( 19, 3*h >> 2 + pad, (w >> 2) - 22, h >> 2, 8);
         }
     }
 
@@ -114,21 +121,34 @@ class darktimesView extends Ui.WatchFace {
 
     function drawTime(dc) {
         var now = Calendar.info(Time.now(), Time.FORMAT_MEDIUM);
-        var timeStr;
-        if (is24 or now.hour < 13) {
-            timeStr = Lang.format("$1$:$2$", [now.hour.format("%02d"), now.min.format("%02d")]);
-        } else {
-            timeStr = Lang.format("$1$:$2$", [(now.hour - 12).format("%02d"), now.min.format("%02d")]);
-        }
-        var dateStr = Lang.format("$1$ $2$ $3$", [now.day_of_week.toUpper().substring(0, 3), now.day.format("%02d"), now.month.toUpper()]);
+        var H = now.hour;
+        var M = now.min;
+        var padHx = 0; //fenix pad
+        var padMx = 0;
+        var pady = 0;
+        var padDate = 0;
 
-        dc.drawText(w >> 1, h/9, dateFont, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
-        dc.drawText(w >> 1 - 4, h >> 2 + 11, timeFont, timeStr, Gfx.TEXT_JUSTIFY_CENTER); //h/4+6 for dincondensed113.fnt
+        if (!is24 and H > 12) {
+            H -= 12;
+        }
+        if (h ^ w) { // fr230...
+            padHx = 1;
+            padMx = -2;
+            pady = -10;
+            padDate = -3;
+        }
+        if (on or showDate) {
+            var dateStr = Lang.format("$1$ $2$ $3$", [now.day_of_week.toUpper().substring(0, 3), now.day.format("%02d"), now.month.toUpper()]);
+            dc.drawText(w >> 1, h/9 + padDate, dateFont, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+        }
+        dc.drawText(w >> 1 - 59 + padHx, h >> 2 + 11 + pady, timeFont, H.format("%02d"), Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w >> 1 - 4, h >> 2 + 11 + pady - colonPos, timeFont, ":", Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w >> 1 + 52 + padMx, h >> 2 + 11 + pady, timeFont, M.format("%02d"), Gfx.TEXT_JUSTIFY_CENTER);
     }
 
     function drawBat(dc) {
         var bat = Sys.getSystemStats().battery;
-        var batStr = bat.format("%d").toString() + "%";
+        var batStr = bat.format("%d") + "%"; //.toString() + "%";
 
         if (bat < batWarning) {
             dc.setColor(batWarningCol, Gfx.COLOR_TRANSPARENT);
@@ -163,13 +183,13 @@ class darktimesView extends Ui.WatchFace {
         batWarningCol = app.getProperty("batWCol_prop");
         msgCol = app.getProperty("msgCol_prop");
         showCount = app.getProperty("countShow_prop");
-        var tmp = app.getProperty("batWarn_prop");
-        if (tmp > 0 && tmp < 100) {
-            batWarning = tmp; // defaults to 15
-        }
+        showBat = app.getProperty("batShow_prop");
+        showDate = app.getProperty("dateShow_prop");
+        batWarning = app.getProperty("batWarn_prop");
         timed = app.getProperty("timed_prop");
         timedCol = app.getProperty("timedCol_prop");
         timedOn = app.getProperty("timedOn_prop");
         timedOff = app.getProperty("timedOff_prop");
+        colonPos = app.getProperty("colonPos_prop");
     }
 }
