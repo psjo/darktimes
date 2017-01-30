@@ -19,6 +19,10 @@
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
 			<listEntry value="0xFFFFFF">@Strings.whiteCol</listEntry>
+			<listEntry value="0xAA0000">@Strings.dkredCol</listEntry>
+			<listEntry value="0xFFAA00">@Strings.yellowCol</listEntry>
+			<listEntry value="0x00AA00">@Strings.dkgreenCol</listEntry>
+			<listEntry value="0xAA00FF">@Strings.purpleCol</listEntry>
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.timeOnCol_prop" title="@Strings.timeOnCol"
@@ -34,6 +38,10 @@
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+			<listEntry value="0xAA0000">@Strings.dkredCol</listEntry>
+			<listEntry value="0xFFAA00">@Strings.yellowCol</listEntry>
+			<listEntry value="0x00AA00">@Strings.dkgreenCol</listEntry>
+			<listEntry value="0xAA00FF">@Strings.purpleCol</listEntry>
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.timeOffCol_prop" title="@Strings.timeOffCol"
@@ -49,6 +57,10 @@
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+			<listEntry value="0xAA0000">@Strings.dkredCol</listEntry>
+			<listEntry value="0xFFAA00">@Strings.yellowCol</listEntry>
+			<listEntry value="0x00AA00">@Strings.dkgreenCol</listEntry>
+			<listEntry value="0xAA00FF">@Strings.purpleCol</listEntry>
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.btCol_prop" title="@Strings.btCol"
@@ -64,6 +76,10 @@
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+			<listEntry value="0xAA0000">@Strings.dkredCol</listEntry>
+			<listEntry value="0xFFAA00">@Strings.yellowCol</listEntry>
+			<listEntry value="0x00AA00">@Strings.dkgreenCol</listEntry>
+			<listEntry value="0xAA00FF">@Strings.purpleCol</listEntry>
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.alarmCol_prop" title="@Strings.alarmCol"
@@ -79,6 +95,10 @@
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+			<listEntry value="0xAA0000">@Strings.dkredCol</listEntry>
+			<listEntry value="0xFFAA00">@Strings.yellowCol</listEntry>
+			<listEntry value="0x00AA00">@Strings.dkgreenCol</listEntry>
+			<listEntry value="0xAA00FF">@Strings.purpleCol</listEntry>
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.msgCol_prop" title="@Strings.msgCol"
@@ -94,6 +114,10 @@
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+			<listEntry value="0xAA0000">@Strings.dkredCol</listEntry>
+			<listEntry value="0xFFAA00">@Strings.yellowCol</listEntry>
+			<listEntry value="0x00AA00">@Strings.dkgreenCol</listEntry>
+			<listEntry value="0xAA00FF">@Strings.purpleCol</listEntry>
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.batWCol_prop" title="@Strings.batWCol"
@@ -109,6 +133,10 @@
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+			<listEntry value="0xAA0000">@Strings.dkredCol</listEntry>
+			<listEntry value="0xFFAA00">@Strings.yellowCol</listEntry>
+			<listEntry value="0x00AA00">@Strings.dkgreenCol</listEntry>
+			<listEntry value="0xAA00FF">@Strings.purpleCol</listEntry>
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.batWarn_prop" title="@Strings.batWPrompt">
@@ -149,10 +177,18 @@
 			<listEntry value="0x00FF00">@Strings.greenCol</listEntry>
 			<listEntry value="0xFF5500">@Strings.orangeCol</listEntry>
 			<listEntry value="0xFF00FF">@Strings.pinkCol</listEntry>
+			<listEntry value="0xAA0000">@Strings.dkredCol</listEntry>
+			<listEntry value="0xFFAA00">@Strings.yellowCol</listEntry>
+			<listEntry value="0x00AA00">@Strings.dkgreenCol</listEntry>
+			<listEntry value="0xAA00FF">@Strings.purpleCol</listEntry>
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.colonPos_prop" title="@Strings.colonPos">
 		<settingConfig type="numeric" min="0" max="46"
 			errorMessage="@Strings.colonValueError" />
+	</setting>
+	<setting propertyKey="@Properties.analogShow_prop" title="@Strings.showAnalog"
+		prompt="@Strings.analogPrompt">
+		<settingConfig type="boolean" />
 	</setting>
 </settings>

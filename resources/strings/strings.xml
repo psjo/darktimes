@@ -9,6 +9,8 @@
 	<string id="showCount">Show message/alarm count when awake</string>
 	<string id="showBat">Show battery status in sleep mode</string>
 	<string id="showDate">Show date in sleep mode</string>
+	<string id="showAnalog">The analog preview option. Be warned</string>
+	<string id="analogPrompt">Not for everyone</string>
 	<string id="timed">Show time during a period of time, on/off on the hour</string>
 	<string id="timedCol">Color during time period</string>
 	<string id="timedPrompt">..only works when asleep and background color is the same</string>
@@ -33,4 +35,8 @@
 	<string id="redCol">red</string>
 	<string id="greenCol">green</string>
 	<string id="orangeCol">orange</string>
+	<string id="dkredCol">dark red</string>
+	<string id="yellowCol">yellow</string>
+	<string id="dkgreenCol">dark green</string>
+	<string id="purpleCol">purple</string>
 </strings>

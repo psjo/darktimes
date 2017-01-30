@@ -4,9 +4,9 @@ using Toybox.System as Sys;
 using Toybox.Lang as Lang;
 using Toybox.Time.Gregorian as Calendar;
 using Toybox.Application as App;
+using Toybox.Math as Math;
 
 class darktimesView extends Ui.WatchFace {
-    // globals
     var loadSettings = true;
     var countFont = Gfx.FONT_NUMBER_MEDIUM;
     var dateFont = Gfx.FONT_SYSTEM_LARGE;
@@ -20,6 +20,7 @@ class darktimesView extends Ui.WatchFace {
     var showCount;
     var showBat;
     var showDate;
+    var showAnalog;
     var timed = false;
     var batWarning = 15;
     var batWarningCol; // = Gfx.COLOR_PINK;
@@ -30,7 +31,13 @@ class darktimesView extends Ui.WatchFace {
     var alarmCol; // = Gfx.COLOR_LT_GRAY;
     var bgCol; //Gfx.COLOR_BLACK;
     var msgCol; //Gfx.COLOR_WHITE;
-    var colonPos; // 0; // 0=bottom, 46=top
+    var colonPos; // 0=bottom, 46=top
+    var min = []; // minute hand
+    var hour = []; // hour hand
+    var sqrt3d2 = Math.sqrt(3) / 2;
+    var pit2 = Math.PI * 2;
+    var pid6 = Math.PI / 6;
+
 
     function initialize() {
         WatchFace.initialize();
@@ -39,6 +46,12 @@ class darktimesView extends Ui.WatchFace {
     function onLayout(dc) {
         w = dc.getWidth();
         h = dc.getHeight();
+        min = [ [ 0, h >> 1 - 6 ],
+                [ 0, h >> 1 - 24 ] ];
+        min = toCyl(min, 2);
+        hour = [ [ 0, h >> 1 - 24 ],
+                [ 0, h >> 1 - 36 ] ];
+        hour = toCyl(hour, 2);
         timeFont = Ui.loadResource(Rez.Fonts.id_theFont);
     }
 
@@ -51,14 +64,15 @@ class darktimesView extends Ui.WatchFace {
             loadSettings = false;
         }
         drawBG(dc);
-        drawMsg(dc);
 
         // draw time or not
         if (on) {
+            drawMsg(dc);
             dc.setColor(timeOnCol, Gfx.COLOR_TRANSPARENT);
             drawTime(dc);
             drawBat(dc);
         } else if (timeOffCol != bgCol) {
+            drawMsg(dc);
             dc.setColor(timeOffCol, Gfx.COLOR_TRANSPARENT);
             drawTime(dc);
             if (showBat) {
@@ -67,12 +81,21 @@ class darktimesView extends Ui.WatchFace {
         } else if (timed) {
             var h = Sys.getClockTime().hour;
             if ((timedOn > timedOff and (h >= timedOn or h < timedOff)) or (timedOn < timedOff and (h >= timedOn and h < timedOff))) {
+                drawMsg(dc);
                 dc.setColor(timedCol, Gfx.COLOR_TRANSPARENT);
                 drawTime(dc);
                 if (showBat) {
                     drawBat(dc);
                 }
+            } else if (showAnalog) {
+                drawAnalog(dc);
+            } else {
+                drawMsg(dc);
             }
+        } else if (showAnalog){
+            drawAnalog(dc);
+        } else {
+            drawMsg(dc);
         }
     }
 
@@ -152,8 +175,28 @@ class darktimesView extends Ui.WatchFace {
         if (bat < batWarning) {
             dc.setColor(batWarningCol, Gfx.COLOR_TRANSPARENT);
         }
-
         dc.drawText(w >> 1, -5, batFont, batStr, Gfx.TEXT_JUSTIFY_CENTER);
+    }
+
+    function drawAnalog(dc) {
+        var now = Sys.getClockTime();
+        var m = now.min;
+        var hr = pid6*(now.hour % 12 + m/60.0);
+        m = pid6*m/5.0;
+        var mina = new [2];
+        dc.setPenWidth(4);
+        // hour
+        for (var i = 0; i < 2; i += 1) {
+            mina[i] = [h >> 1 + hour[i][0]*Math.sin(hour[i][1] + hr), h >> 1 - hour[i][0]*Math.cos(hour[i][1] + hr)];
+        }
+        dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
+        dc.drawLine(mina[0][0]+(w-h)/2, mina[0][1], mina[1][0]+(w-h)/2, mina[1][1]);
+        // minute
+        for (var i = 0; i < 2; i += 1) {
+            mina[i] = [h >> 1 + min[i][0]*Math.sin(min[i][1] + m), h >> 1 - min[i][0]*Math.cos(min[i][1] + m)];
+        }
+        dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        dc.drawLine(mina[0][0]+(w-h)/2, mina[0][1], mina[1][0]+(w-h)/2, mina[1][1]);
     }
 
     function onHide() {
@@ -190,5 +233,22 @@ class darktimesView extends Ui.WatchFace {
         timedOn = app.getProperty("timedOn_prop");
         timedOff = app.getProperty("timedOff_prop");
         colonPos = app.getProperty("colonPos_prop");
+        showAnalog = app.getProperty("analogShow_prop");
+    }
+
+    // preparation for more advanced hands
+    function toCyl(pos, len) {
+        var r;
+        var a;
+        for (var i = 0; i < len; i += 1) {
+            r = Math.sqrt(Math.pow(pos[i][0], 2) + Math.pow(pos[i][1], 2));
+            a = Math.acos(pos[i][1]/r);
+            if (pos[i][0] < 0) {
+                pos[i] = [r, -a];
+            } else {
+                pos[i] = [r, a];
+            }
+        }
+        return pos;
     }
 }
