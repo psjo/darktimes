@@ -16,6 +16,7 @@
 	<string id="timedPrompt">..only works when asleep and background color is the same</string>
 	<string id="timedOn">Time to start showing the time in sleep mode, 0-23</string>
 	<string id="timedOff">Time to stop showing the time in sleep mode, 0-23</string>
+	<string id="hl">length of analog hands 1-5, 1=short, 4=center, 5+</string>
 	<string id="bgCol">Background color</string>
 	<string id="colPrompt">Pick a color</string>
 	<string id="timeOnCol">Color when awake (time/date)</string>

@@ -1,6 +1,6 @@
 <properties>
 	<property id="appName" type="string">DarkTimes</property>
-	<property id="appVersion" type="string">20170130</property>
+	<property id="appVersion" type="string">20170207</property>
 	<property id="batWarn_prop" type="number">11</property>
 	<property id="bgCol_prop" type="number">0x000000</property>
 	<property id="timeOnCol_prop" type="number">0xFFFFFF</property>
@@ -18,4 +18,5 @@
 	<property id="timedOff_prop" type="number">8</property>
 	<property id="colonPos_prop" type="number">0</property>
 	<property id="analogShow_prop" type="boolean">false</property>
+	<property id="hl_prop" type="number">1</property>
 </properties>

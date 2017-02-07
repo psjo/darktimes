@@ -37,6 +37,7 @@ class darktimesView extends Ui.WatchFace {
     var sqrt3d2 = Math.sqrt(3) / 2;
     var pit2 = Math.PI * 2;
     var pid6 = Math.PI / 6;
+    var hl = 1; // 1 is short, 2, 3=medium, 4=center, 5=extra long
 
 
     function initialize() {
@@ -46,12 +47,6 @@ class darktimesView extends Ui.WatchFace {
     function onLayout(dc) {
         w = dc.getWidth();
         h = dc.getHeight();
-        min = [ [ 0, h >> 1 - 6 ],
-                [ 0, h >> 1 - 24 ] ];
-        min = toCyl(min, 2);
-        hour = [ [ 0, h >> 1 - 24 ],
-                [ 0, h >> 1 - 36 ] ];
-        hour = toCyl(hour, 2);
         timeFont = Ui.loadResource(Rez.Fonts.id_theFont);
     }
 
@@ -186,16 +181,19 @@ class darktimesView extends Ui.WatchFace {
         var mina = new [2];
         dc.setPenWidth(4);
         // hour
-        for (var i = 0; i < 2; i += 1) {
-            mina[i] = [h >> 1 + hour[i][0]*Math.sin(hour[i][1] + hr), h >> 1 - hour[i][0]*Math.cos(hour[i][1] + hr)];
-        }
         dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
+        mina[0] = [h >> 1 + hour[0][0]*Math.sin(hour[0][1] + hr), h >> 1 - hour[0][0]*Math.cos(hour[0][1] + hr)];
+        mina[1] = [h >> 1 + hour[hl][0]*Math.sin(hour[hl][1] + hr), h >> 1 - hour[hl][0]*Math.cos(hour[hl][1] + hr)];
         dc.drawLine(mina[0][0]+(w-h)/2, mina[0][1], mina[1][0]+(w-h)/2, mina[1][1]);
         // minute
-        for (var i = 0; i < 2; i += 1) {
-            mina[i] = [h >> 1 + min[i][0]*Math.sin(min[i][1] + m), h >> 1 - min[i][0]*Math.cos(min[i][1] + m)];
+        if (Sys.getDeviceSettings().notificationCount) {
+            dc.setColor(~Gfx.COLOR_RED, -1);
+            //dc.setColor(Gfx.COLOR_GREEN, -1);
+        } else {
+            dc.setColor(Gfx.COLOR_RED, -1);
         }
-        dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        mina[0] = [h >> 1 + min[0][0]*Math.sin(min[0][1] + m), h >> 1 - min[0][0]*Math.cos(min[0][1] + m)];
+        mina[1] = [h >> 1 + min[hl][0]*Math.sin(min[hl][1] + m), h >> 1 - min[hl][0]*Math.cos(min[hl][1] + m)];
         dc.drawLine(mina[0][0]+(w-h)/2, mina[0][1], mina[1][0]+(w-h)/2, mina[1][1]);
     }
 
@@ -213,6 +211,21 @@ class darktimesView extends Ui.WatchFace {
     function getSettings() {
         var settings = Sys.getDeviceSettings();
         is24 = settings.is24Hour;
+        // min, hour in cyl.coords
+        min = [ [ h >> 1 - 6, 0 ],
+                [ h >> 1 - 24, 0 ],
+                [ h >> 2, 0 ],
+                [ h >> 3, 0 ],
+                [ 0, 0 ],
+                [ -h >> 3, 0 ] ];
+        //min = toCyl(min, 6);
+        hour = [ [ h >> 1 - 24, 0 ],
+                [ h >> 1 - 36, 0 ],
+                [ h >> 2 - 14, 0 ],
+                [  h >> 3 - 14, 0 ],
+                [ 0, 0 ],
+                [ -h >> 4, 0 ] ];
+        //hour = toCyl(hour, 6);
 
         var app = App.getApp();
 
@@ -234,6 +247,7 @@ class darktimesView extends Ui.WatchFace {
         timedOff = app.getProperty("timedOff_prop");
         colonPos = app.getProperty("colonPos_prop");
         showAnalog = app.getProperty("analogShow_prop");
+        hl = app.getProperty("hl_prop");
     }
 
     // preparation for more advanced hands
