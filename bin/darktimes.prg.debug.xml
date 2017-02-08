@@ -94,169 +94,160 @@
 <entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="180" pc="268437931" symbol="drawAnalog"/>
 <entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="181" pc="268437950" symbol="drawAnalog"/>
 <entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="182" pc="268437958" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="184" pc="268437975" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="185" pc="268438011" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="186" pc="268438191" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="187" pc="268438383" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="188" pc="268438499" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="189" pc="268438523" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="192" pc="268438556" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="195" pc="268438585" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="196" pc="268438765" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="197" pc="268438957" symbol="drawAnalog"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="200" pc="268439074" symbol="onHide"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="203" pc="268439079" symbol="onExitSleep"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="204" pc="268439083" symbol="onExitSleep"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="207" pc="268439094" symbol="onEnterSleep"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="208" pc="268439098" symbol="onEnterSleep"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="211" pc="268439109" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="212" pc="268439113" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="213" pc="268439130" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="214" pc="268439146" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="221" pc="268439468" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="229" pc="268439802" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="231" pc="268439819" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="232" pc="268439843" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="234" pc="268439867" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="235" pc="268439891" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="236" pc="268439915" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="237" pc="268439939" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="238" pc="268439963" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="239" pc="268439987" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="240" pc="268440011" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="241" pc="268440035" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="242" pc="268440059" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="243" pc="268440083" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="244" pc="268440107" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="245" pc="268440131" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="246" pc="268440155" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="247" pc="268440179" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="248" pc="268440203" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="249" pc="268440227" symbol="getSettings"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="253" pc="268440252" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="254" pc="268440256" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="255" pc="268440256" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="256" pc="268440256" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="257" pc="268440271" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="258" pc="268440351" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="259" pc="268440382" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="260" pc="268440402" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="262" pc="268440442" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="265" pc="268440486" symbol="toCyl"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="8" pc="268440490" symbol="initialize"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="9" pc="268440494" symbol="initialize"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="13" pc="268440513" symbol="onStart"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="17" pc="268440518" symbol="onStop"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="21" pc="268440523" symbol="getInitialView"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="22" pc="268440527" symbol="getInitialView"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="23" pc="268440557" symbol="getInitialView"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="26" pc="268440581" symbol="onSettingsChanged"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="27" pc="268440585" symbol="onSettingsChanged"/>
-<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="28" pc="268440601" symbol="onSettingsChanged"/>
-<entry filename="Rez" lineNum="59" pc="268440618" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="61" pc="268440622" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="62" pc="268440785" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="63" pc="268440810" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="64" pc="268440862" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="67" pc="268440908" symbol="WatchFace"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="185" pc="268437975" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="188" pc="268438011" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="189" pc="268438149" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="190" pc="268438293" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="193" pc="268438409" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="194" pc="268438433" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="197" pc="268438466" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="201" pc="268438495" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="202" pc="268438633" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="203" pc="268438777" symbol="drawAnalog"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="206" pc="268438894" symbol="onHide"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="209" pc="268438899" symbol="onExitSleep"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="210" pc="268438903" symbol="onExitSleep"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="213" pc="268438914" symbol="onEnterSleep"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="214" pc="268438918" symbol="onEnterSleep"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="217" pc="268438929" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="218" pc="268438933" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="219" pc="268438950" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="221" pc="268438966" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="228" pc="268439288" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="236" pc="268439622" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="238" pc="268439639" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="239" pc="268439663" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="241" pc="268439687" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="242" pc="268439711" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="243" pc="268439735" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="244" pc="268439759" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="245" pc="268439783" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="246" pc="268439807" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="247" pc="268439831" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="248" pc="268439855" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="249" pc="268439879" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="250" pc="268439903" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="251" pc="268439927" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="252" pc="268439951" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="253" pc="268439975" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="254" pc="268439999" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="255" pc="268440023" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesView.mc" lineNum="256" pc="268440047" symbol="getSettings"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="8" pc="268440072" symbol="initialize"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="9" pc="268440076" symbol="initialize"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="13" pc="268440095" symbol="onStart"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="17" pc="268440100" symbol="onStop"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="21" pc="268440105" symbol="getInitialView"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="22" pc="268440109" symbol="getInitialView"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="23" pc="268440139" symbol="getInitialView"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="26" pc="268440163" symbol="onSettingsChanged"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="27" pc="268440167" symbol="onSettingsChanged"/>
+<entry filename="/Users/keso/src/workspace/darktimes/source/darktimesApp.mc" lineNum="28" pc="268440183" symbol="onSettingsChanged"/>
+<entry filename="Rez" lineNum="61" pc="268440200" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="63" pc="268440204" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="64" pc="268440367" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="65" pc="268440392" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="66" pc="268440444" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="69" pc="268440490" symbol="WatchFace"/>
 </pcToLineNum>
 <symbolTable>
-<entry field="true" id="38" symbol="timeOnCol"/>
-<entry field="true" id="67" symbol="sqrt3d2"/>
-<entry field="true" id="43" symbol="timedValueError"/>
-<entry field="true" id="16" symbol="dkgreenCol"/>
+<entry field="true" id="39" symbol="timeOnCol"/>
+<entry field="true" id="69" symbol="sqrt3d2"/>
+<entry field="true" id="44" symbol="timedValueError"/>
+<entry field="true" id="17" symbol="dkgreenCol"/>
 <entry id="8389124" method="true" symbol="onUpdate"/>
-<entry field="true" id="17" symbol="appVersion"/>
+<entry field="true" id="18" symbol="appVersion"/>
 <entry id="8389349" symbol="justification"/>
-<entry field="true" id="51" symbol="msgCol"/>
-<entry id="76" method="true" symbol="toCyl"/>
-<entry field="true" id="40" symbol="dkgrayCol"/>
+<entry field="true" id="53" symbol="msgCol"/>
+<entry field="true" id="41" symbol="dkgrayCol"/>
 <entry field="true" id="14" symbol="id_theFont"/>
 <entry field="true" id="8388611" symbol="Toybox"/>
-<entry field="true" id="23" symbol="blueCol"/>
+<entry field="true" id="24" symbol="blueCol"/>
 <entry field="true" id="8388720" symbol="hour"/>
 <entry id="8388770" module="true" symbol="Strings"/>
-<entry field="true" id="31" symbol="showCount"/>
-<entry field="true" id="44" symbol="redCol"/>
-<entry id="73" method="true" symbol="drawBat"/>
-<entry field="true" id="55" symbol="blackCol"/>
+<entry field="true" id="32" symbol="showCount"/>
+<entry field="true" id="45" symbol="redCol"/>
+<entry id="75" method="true" symbol="drawBat"/>
+<entry field="true" id="57" symbol="blackCol"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
 <entry id="8389377" method="true" symbol="onExitSleep"/>
-<entry field="true" id="34" symbol="timeOffCol"/>
+<entry field="true" id="35" symbol="timeOffCol"/>
 <entry field="true" id="15" symbol="dkredCol"/>
 <entry id="8388640" symbol="Lang"/>
 <entry id="9" object="true" symbol="darktimesApp"/>
 <entry id="8388769" module="true" symbol="Rez"/>
 <entry id="8389123" method="true" symbol="onShow"/>
-<entry field="true" id="54" symbol="timedCol"/>
-<entry field="true" id="28" symbol="batWCol"/>
-<entry field="true" id="35" symbol="timedOn"/>
-<entry field="true" id="36" symbol="timedPrompt"/>
-<entry field="true" id="39" symbol="timed"/>
+<entry field="true" id="56" symbol="timedCol"/>
+<entry field="true" id="29" symbol="batWCol"/>
+<entry field="true" id="36" symbol="timedOn"/>
+<entry field="true" id="37" symbol="timedPrompt"/>
+<entry field="true" id="40" symbol="timed"/>
 <entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="29" symbol="AppName"/>
+<entry field="true" id="30" symbol="AppName"/>
 <entry field="true" id="10" symbol="view"/>
-<entry field="true" id="32" symbol="showAnalog"/>
+<entry field="true" id="33" symbol="showAnalog"/>
 <entry id="8389375" method="true" symbol="WatchFace"/>
-<entry field="true" id="60" symbol="batFont"/>
-<entry field="true" id="68" symbol="pit2"/>
-<entry field="true" id="37" symbol="alarmCol"/>
-<entry field="true" id="26" symbol="orangeCol"/>
+<entry field="true" id="62" symbol="batFont"/>
+<entry field="true" id="70" symbol="pit2"/>
+<entry field="true" id="38" symbol="alarmCol"/>
+<entry field="true" id="27" symbol="orangeCol"/>
 <entry id="8388641" symbol="Math"/>
 <entry field="true" id="13" symbol="LauncherIcon"/>
-<entry field="true" id="49" symbol="colonPos"/>
-<entry id="72" method="true" symbol="drawTime"/>
-<entry field="true" id="47" symbol="ltgrayCol"/>
+<entry field="true" id="51" symbol="colonPos"/>
+<entry id="74" method="true" symbol="drawTime"/>
+<entry field="true" id="49" symbol="ltgrayCol"/>
 <entry id="8389683" method="true" symbol="onSettingsChanged"/>
 <entry id="8389281" method="true" symbol="onStop"/>
-<entry field="true" id="59" symbol="timeFont"/>
-<entry field="true" id="56" symbol="loadSettings"/>
+<entry field="true" id="61" symbol="timeFont"/>
+<entry field="true" id="58" symbol="loadSettings"/>
 <entry id="8389065" symbol="locY"/>
 <entry id="8389064" symbol="locX"/>
 <entry id="8388771" module="true" symbol="Drawables"/>
 <entry id="8389122" method="true" symbol="onLayout"/>
-<entry field="true" id="58" symbol="dateFont"/>
-<entry id="70" method="true" symbol="drawMsg"/>
+<entry field="true" id="60" symbol="dateFont"/>
+<entry id="72" method="true" symbol="drawMsg"/>
 <entry id="8389279" method="true" symbol="onStart"/>
-<entry field="true" id="41" symbol="whiteCol"/>
-<entry field="true" id="66" symbol="batWarningCol"/>
-<entry field="true" id="24" symbol="timedOff"/>
-<entry field="true" id="22" symbol="batValueError"/>
-<entry field="true" id="69" symbol="pid6"/>
+<entry field="true" id="42" symbol="whiteCol"/>
+<entry field="true" id="68" symbol="batWarningCol"/>
+<entry field="true" id="25" symbol="timedOff"/>
+<entry field="true" id="23" symbol="batValueError"/>
+<entry field="true" id="71" symbol="pid6"/>
 <entry id="8389376" method="true" symbol="onEnterSleep"/>
 <entry id="8389348" symbol="font"/>
-<entry field="true" id="27" symbol="showDate"/>
-<entry field="true" id="50" symbol="dkblueCol"/>
+<entry field="true" id="28" symbol="showDate"/>
+<entry field="true" id="52" symbol="dkblueCol"/>
 <entry id="8389347" symbol="color"/>
-<entry field="true" id="33" symbol="btCol"/>
+<entry field="true" id="16" symbol="choosePrompt"/>
+<entry field="true" id="34" symbol="btCol"/>
 <entry id="8" object="true" symbol="darktimesView"/>
-<entry id="74" method="true" symbol="drawAnalog"/>
-<entry field="true" id="20" symbol="purpleCol"/>
-<entry field="true" id="52" symbol="colPrompt"/>
+<entry id="76" method="true" symbol="drawAnalog"/>
+<entry field="true" id="21" symbol="purpleCol"/>
+<entry field="true" id="54" symbol="colPrompt"/>
 <entry id="12" module="true" symbol="Layouts"/>
-<entry field="true" id="65" symbol="batWarning"/>
-<entry field="true" id="53" symbol="analogPrompt"/>
+<entry field="true" id="67" symbol="batWarning"/>
+<entry field="true" id="55" symbol="analogPrompt"/>
 <entry field="true" id="8388721" symbol="min"/>
 <entry id="8389125" method="true" symbol="onHide"/>
-<entry field="true" id="46" symbol="bgCol"/>
-<entry id="75" method="true" symbol="getSettings"/>
-<entry field="true" id="18" symbol="yellowCol"/>
-<entry field="true" id="63" symbol="on"/>
-<entry field="true" id="42" symbol="appName"/>
-<entry field="true" id="30" symbol="colonValueError"/>
+<entry field="true" id="48" symbol="bgCol"/>
+<entry id="77" method="true" symbol="getSettings"/>
+<entry field="true" id="19" symbol="yellowCol"/>
+<entry field="true" id="65" symbol="on"/>
+<entry field="true" id="43" symbol="appName"/>
+<entry field="true" id="31" symbol="colonValueError"/>
 <entry id="8389063" symbol="identifier"/>
-<entry field="true" id="25" symbol="pinkCol"/>
-<entry field="true" id="45" symbol="showBat"/>
+<entry field="true" id="26" symbol="pinkCol"/>
+<entry field="true" id="47" symbol="showBat"/>
 <entry id="11" module="true" symbol="Menus"/>
-<entry field="true" id="64" symbol="is24"/>
-<entry field="true" id="19" symbol="hl"/>
-<entry field="true" id="57" symbol="countFont"/>
-<entry field="true" id="48" symbol="batWPrompt"/>
-<entry field="true" id="21" symbol="greenCol"/>
-<entry field="true" id="61" symbol="w"/>
+<entry field="true" id="66" symbol="is24"/>
+<entry field="true" id="20" symbol="hl"/>
+<entry field="true" id="59" symbol="countFont"/>
+<entry field="true" id="50" symbol="batWPrompt"/>
+<entry field="true" id="22" symbol="greenCol"/>
+<entry field="true" id="63" symbol="w"/>
 <entry id="8388772" module="true" symbol="Fonts"/>
-<entry field="true" id="62" symbol="h"/>
-<entry id="71" method="true" symbol="drawBG"/>
+<entry field="true" id="64" symbol="h"/>
+<entry id="73" method="true" symbol="drawBG"/>
+<entry field="true" id="46" symbol="hlValueError"/>
 </symbolTable>
 <localVars>
 <entry endPc="268436101" name="h" stackId="2" startPc="268435834"/>
@@ -275,17 +266,14 @@
 <entry endPc="268437710" name="M" stackId="4" startPc="268437020"/>
 <entry endPc="268437865" name="batStr" stackId="3" startPc="268437715"/>
 <entry endPc="268437865" name="bat" stackId="2" startPc="268437715"/>
-<entry endPc="268439073" name="m" stackId="3" startPc="268437870"/>
-<entry endPc="268439073" name="mina" stackId="5" startPc="268437870"/>
-<entry endPc="268439073" name="now" stackId="2" startPc="268437870"/>
-<entry endPc="268439073" name="hr" stackId="4" startPc="268437870"/>
-<entry endPc="268440251" name="settings" stackId="1" startPc="268439113"/>
-<entry endPc="268440251" name="app" stackId="2" startPc="268439113"/>
-<entry endPc="268440486" name="i" stackId="5" startPc="268440271"/>
-<entry endPc="268440489" name="a" stackId="4" startPc="268440256"/>
-<entry endPc="268440489" name="r" stackId="3" startPc="268440256"/>
-<entry endPc="268440925" name="rez_cmp_local_bitmap_TimeLabel" stackId="2" startPc="268440622"/>
-<entry endPc="268440925" name="rez_cmp_local_bitmap_TimeLabel_fontHeight" stackId="3" startPc="268440622"/>
+<entry endPc="268438893" name="m" stackId="3" startPc="268437870"/>
+<entry endPc="268438893" name="mina" stackId="5" startPc="268437870"/>
+<entry endPc="268438893" name="now" stackId="2" startPc="268437870"/>
+<entry endPc="268438893" name="hr" stackId="4" startPc="268437870"/>
+<entry endPc="268440071" name="settings" stackId="1" startPc="268438933"/>
+<entry endPc="268440071" name="app" stackId="2" startPc="268438933"/>
+<entry endPc="268440507" name="rez_cmp_local_bitmap_TimeLabel" stackId="2" startPc="268440204"/>
+<entry endPc="268440507" name="rez_cmp_local_bitmap_TimeLabel_fontHeight" stackId="3" startPc="268440204"/>
 </localVars>
 <annotations/>
 <functions>
@@ -333,11 +321,6 @@
 <documentation/>
 </functionEntry>
 <functionEntry name="getSettings" parent="darktimesView">
-<documentation/>
-</functionEntry>
-<functionEntry name="toCyl" parent="darktimesView">
-<param id="pos"/>
-<param id="len"/>
 <documentation/>
 </functionEntry>
 <functionEntry name="initialize" parent="darktimesApp">

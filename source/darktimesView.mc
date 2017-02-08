@@ -180,11 +180,15 @@ class darktimesView extends Ui.WatchFace {
         m = pid6*m/5.0;
         var mina = new [2];
         dc.setPenWidth(4);
+
         // hour
         dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
-        mina[0] = [h >> 1 + hour[0][0]*Math.sin(hour[0][1] + hr), h >> 1 - hour[0][0]*Math.cos(hour[0][1] + hr)];
-        mina[1] = [h >> 1 + hour[hl][0]*Math.sin(hour[hl][1] + hr), h >> 1 - hour[hl][0]*Math.cos(hour[hl][1] + hr)];
+        //mina[0] = [h >> 1 + hour[0][0]*Math.sin(hour[0][1] + hr), h >> 1 - hour[0][0]*Math.cos(hour[0][1] + hr)];
+        //mina[1] = [h >> 1 + hour[hl][0]*Math.sin(hour[hl][1] + hr), h >> 1 - hour[hl][0]*Math.cos(hour[hl][1] + hr)];
+        mina[0] = [h >> 1 + hour[0][0]*Math.sin(hr), h >> 1 - hour[0][0]*Math.cos(hr)];
+        mina[1] = [h >> 1 + hour[hl][0]*Math.sin(hr), h >> 1 - hour[hl][0]*Math.cos(hr)];
         dc.drawLine(mina[0][0]+(w-h)/2, mina[0][1], mina[1][0]+(w-h)/2, mina[1][1]);
+
         // minute
         if (Sys.getDeviceSettings().notificationCount) {
             dc.setColor(~Gfx.COLOR_RED, -1);
@@ -192,9 +196,11 @@ class darktimesView extends Ui.WatchFace {
         } else {
             dc.setColor(Gfx.COLOR_RED, -1);
         }
-        mina[0] = [h >> 1 + min[0][0]*Math.sin(min[0][1] + m), h >> 1 - min[0][0]*Math.cos(min[0][1] + m)];
-        mina[1] = [h >> 1 + min[hl][0]*Math.sin(min[hl][1] + m), h >> 1 - min[hl][0]*Math.cos(min[hl][1] + m)];
-        dc.drawLine(mina[0][0]+(w-h)/2, mina[0][1], mina[1][0]+(w-h)/2, mina[1][1]);
+        //mina[0] = [h >> 1 + min[0][0]*Math.sin(min[0][1] + m), h >> 1 - min[0][0]*Math.cos(min[0][1] + m)];
+        //mina[1] = [h >> 1 + min[hl][0]*Math.sin(min[hl][1] + m), h >> 1 - min[hl][0]*Math.cos(min[hl][1] + m)];
+        mina[0] = [h >> 1 + min[0][0]*Math.sin( m ), h >> 1 - min[0][0]*Math.cos( m )];
+        mina[1] = [h >> 1 + min[hl][0]*Math.sin( m ), h >> 1 - min[hl][0]*Math.cos( m )];
+        dc.drawLine(mina[0][0]+(w - h)/2, mina[0][1], mina[1][0]+(w - h)/2, mina[1][1]);
     }
 
     function onHide() {
@@ -250,7 +256,7 @@ class darktimesView extends Ui.WatchFace {
         hl = app.getProperty("hl_prop");
     }
 
-    // preparation for more advanced hands
+    /* preparation for more advanced hands
     function toCyl(pos, len) {
         var r;
         var a;
@@ -265,4 +271,5 @@ class darktimesView extends Ui.WatchFace {
         }
         return pos;
     }
+    */
 }

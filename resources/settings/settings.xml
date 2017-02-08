@@ -183,7 +183,8 @@
 			<listEntry value="0xAA00FF">@Strings.purpleCol</listEntry>
 		</settingConfig>
 	</setting>
-	<setting propertyKey="@Properties.colonPos_prop" title="@Strings.colonPos">
+	<setting propertyKey="@Properties.colonPos_prop" title="@Strings.colonPos"
+		prompt="@Strings.choosePrompt" >
 		<settingConfig type="numeric" min="0" max="46"
 			errorMessage="@Strings.colonValueError" />
 	</setting>
@@ -193,6 +194,6 @@
 	</setting>
 	<setting propertyKey="@Properties.hl_prop" title="@Strings.hl">
 		<settingConfig type="numeric" min="1" max="5"
-			errorMessage="@Strings.colonValueError" />
+			errorMessage="@Strings.hlValueError" />
 	</setting>
 </settings>

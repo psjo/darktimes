@@ -5,12 +5,14 @@
 	<string id="batValueError">Between one (1) and one hundred (100), please</string>
 	<string id="timedValueError">Between zero (0) and twenty three (23), please</string>
 	<string id="colonValueError">Between zero (0) and forty six (46), please</string>
+	<string id="hlValueError">Between one (1) and five (5), please</string>
 	<string id="colonPos">Vertical position of colon, 0 = bottom, 46 = top</string>
 	<string id="showCount">Show message/alarm count when awake</string>
 	<string id="showBat">Show battery status in sleep mode</string>
 	<string id="showDate">Show date in sleep mode</string>
 	<string id="showAnalog">The analog preview option. Be warned</string>
 	<string id="analogPrompt">Not for everyone</string>
+	<string id="choosePrompt">Choose</string>
 	<string id="timed">Show time during a period of time, on/off on the hour</string>
 	<string id="timedCol">Color during time period</string>
 	<string id="timedPrompt">..only works when asleep and background color is the same</string>
