@@ -192,8 +192,4 @@
 		prompt="@Strings.analogPrompt">
 		<settingConfig type="boolean" />
 	</setting>
-	<setting propertyKey="@Properties.hl_prop" title="@Strings.hlen">
-		<settingConfig type="numeric" min="1" max="5"
-			errorMessage="@Strings.hlenValueError" />
-	</setting>
 </settings>

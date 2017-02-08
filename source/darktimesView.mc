@@ -37,7 +37,7 @@ class darktimesView extends Ui.WatchFace {
     var sqrt3d2 = Math.sqrt(3) / 2;
     var pit2 = Math.PI * 2;
     var pid6 = Math.PI / 6;
-    var handlen = 1; // 1 is short, 2, 3=medium, 4=center, 5=extra long
+    //var handlen = 1; // 1 is short, 2, 3=medium, 4=center, 5=extra long
 
 
     function initialize() {
@@ -190,12 +190,13 @@ class darktimesView extends Ui.WatchFace {
     }
 
     function drawAnalog(dc) {
-        //var now = Sys.getClockTime();
-        var now = Calendar.info(Time.now(), 0); //Sys.getClockTime();
-        var m = now.min;
-        var hr = pid6*(now.hour % 12 + m/60.0);
-        m = pid6*m/5.0;
+
+        var now = Sys.getClockTime();
+        var mnt = now.min;
+        var hr = pid6*(now.hour % 12 + mnt/60.0);
+        mnt = pid6*mnt / 5.0;
         var mina = new [2];
+
         dc.setPenWidth(4);
 
         // hour
@@ -203,21 +204,23 @@ class darktimesView extends Ui.WatchFace {
         //mina[0] = [h >> 1 + hour[0][0]*Math.sin(hour[0][1] + hr), h >> 1 - hour[0][0]*Math.cos(hour[0][1] + hr)];
         //mina[1] = [h >> 1 + hour[handlen][0]*Math.sin(hour[handlen][1] + hr), h >> 1 - hour[handlen][0]*Math.cos(hour[handlen][1] + hr)];
         mina[0] = [h >> 1 + hour[0][0]*Math.sin(hr), h >> 1 - hour[0][0]*Math.cos(hr)];
-        mina[1] = [h >> 1 + hour[handlen][0]*Math.sin(hr), h >> 1 - hour[handlen][0]*Math.cos(hr)];
+        mina[1] = [h >> 1 + hour[1][0]*Math.sin(hr), h >> 1 - hour[1][0]*Math.cos(hr)];
+        //mina[1] = [h >> 1 + hour[handlen][0]*Math.sin(hr), h >> 1 - hour[handlen][0]*Math.cos(hr)];
         dc.drawLine(mina[0][0]+(w-h)/2, mina[0][1], mina[1][0]+(w-h)/2, mina[1][1]);
 
         // minute
         if (Sys.getDeviceSettings().notificationCount) {
-            dc.setColor(~Gfx.COLOR_RED, -1);
-            //dc.setColor(Gfx.COLOR_GREEN, -1);
+            dc.setColor(Gfx.COLOR_BLUE, -1);
         } else {
             dc.setColor(Gfx.COLOR_RED, -1);
         }
         //mina[0] = [h >> 1 + min[0][0]*Math.sin(min[0][1] + m), h >> 1 - min[0][0]*Math.cos(min[0][1] + m)];
         //mina[1] = [h >> 1 + min[handlen][0]*Math.sin(min[handlen][1] + m), h >> 1 - min[handlen][0]*Math.cos(min[handlen][1] + m)];
-        mina[0] = [h >> 1 + min[0][0]*Math.sin( m ), h >> 1 - min[0][0]*Math.cos( m )];
-        mina[1] = [h >> 1 + min[handlen][0]*Math.sin( m ), h >> 1 - min[handlen][0]*Math.cos( m )];
+        mina[0] = [h >> 1 + min[0][0]*Math.sin( mnt ), h >> 1 - min[0][0]*Math.cos( mnt )];
+        mina[1] = [h >> 1 + min[1][0]*Math.sin( mnt ), h >> 1 - min[1][0]*Math.cos( mnt )];
+        //mina[1] = [h >> 1 + min[handlen][0]*Math.sin( m ), h >> 1 - min[handlen][0]*Math.cos( m )];
         dc.drawLine(mina[0][0]+(w - h)/2, mina[0][1], mina[1][0]+(w - h)/2, mina[1][1]);
+
     }
 
     function onHide() {
@@ -229,6 +232,7 @@ class darktimesView extends Ui.WatchFace {
 
     function onEnterSleep() {
         on = false;
+        Ui.requestUpdate();
     }
 
     function getSettings() {

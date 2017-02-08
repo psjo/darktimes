@@ -18,5 +18,4 @@
 	<property id="timedOff_prop" type="number">8</property>
 	<property id="colonPos_prop" type="number">0</property>
 	<property id="analogShow_prop" type="boolean">false</property>
-	<property id="hl_prop" type="number">1</property>
 </properties>
