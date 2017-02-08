@@ -37,7 +37,7 @@ class darktimesView extends Ui.WatchFace {
     var sqrt3d2 = Math.sqrt(3) / 2;
     var pit2 = Math.PI * 2;
     var pid6 = Math.PI / 6;
-    var hl = 1; // 1 is short, 2, 3=medium, 4=center, 5=extra long
+    var handlen = 1; // 1 is short, 2, 3=medium, 4=center, 5=extra long
 
 
     function initialize() {
@@ -48,6 +48,21 @@ class darktimesView extends Ui.WatchFace {
         w = dc.getWidth();
         h = dc.getHeight();
         timeFont = Ui.loadResource(Rez.Fonts.id_theFont);
+        // min, hour in cyl.coords
+        min = [ [ h >> 1 - 6, 0 ],
+                [ h >> 1 - 24, 0 ],
+                [ h >> 2, 0 ],
+                [ h >> 3, 0 ],
+                [ 0, 0 ],
+                [ -h >> 3, 0 ] ];
+        //min = toCyl(min, 6);
+        hour = [ [ h >> 1 - 24, 0 ],
+                [ h >> 1 - 36, 0 ],
+                [ h >> 2 - 14, 0 ],
+                [  h >> 3 - 14, 0 ],
+                [ 0, 0 ],
+                [ -h >> 4, 0 ] ];
+        //hour = toCyl(hour, 6);
     }
 
     function onShow() {
@@ -59,6 +74,7 @@ class darktimesView extends Ui.WatchFace {
             loadSettings = false;
         }
         drawBG(dc);
+        //showAnalog = true;
 
         // draw time or not
         if (on) {
@@ -174,7 +190,8 @@ class darktimesView extends Ui.WatchFace {
     }
 
     function drawAnalog(dc) {
-        var now = Sys.getClockTime();
+        //var now = Sys.getClockTime();
+        var now = Calendar.info(Time.now(), 0); //Sys.getClockTime();
         var m = now.min;
         var hr = pid6*(now.hour % 12 + m/60.0);
         m = pid6*m/5.0;
@@ -184,9 +201,9 @@ class darktimesView extends Ui.WatchFace {
         // hour
         dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
         //mina[0] = [h >> 1 + hour[0][0]*Math.sin(hour[0][1] + hr), h >> 1 - hour[0][0]*Math.cos(hour[0][1] + hr)];
-        //mina[1] = [h >> 1 + hour[hl][0]*Math.sin(hour[hl][1] + hr), h >> 1 - hour[hl][0]*Math.cos(hour[hl][1] + hr)];
+        //mina[1] = [h >> 1 + hour[handlen][0]*Math.sin(hour[handlen][1] + hr), h >> 1 - hour[handlen][0]*Math.cos(hour[handlen][1] + hr)];
         mina[0] = [h >> 1 + hour[0][0]*Math.sin(hr), h >> 1 - hour[0][0]*Math.cos(hr)];
-        mina[1] = [h >> 1 + hour[hl][0]*Math.sin(hr), h >> 1 - hour[hl][0]*Math.cos(hr)];
+        mina[1] = [h >> 1 + hour[handlen][0]*Math.sin(hr), h >> 1 - hour[handlen][0]*Math.cos(hr)];
         dc.drawLine(mina[0][0]+(w-h)/2, mina[0][1], mina[1][0]+(w-h)/2, mina[1][1]);
 
         // minute
@@ -197,9 +214,9 @@ class darktimesView extends Ui.WatchFace {
             dc.setColor(Gfx.COLOR_RED, -1);
         }
         //mina[0] = [h >> 1 + min[0][0]*Math.sin(min[0][1] + m), h >> 1 - min[0][0]*Math.cos(min[0][1] + m)];
-        //mina[1] = [h >> 1 + min[hl][0]*Math.sin(min[hl][1] + m), h >> 1 - min[hl][0]*Math.cos(min[hl][1] + m)];
+        //mina[1] = [h >> 1 + min[handlen][0]*Math.sin(min[handlen][1] + m), h >> 1 - min[handlen][0]*Math.cos(min[handlen][1] + m)];
         mina[0] = [h >> 1 + min[0][0]*Math.sin( m ), h >> 1 - min[0][0]*Math.cos( m )];
-        mina[1] = [h >> 1 + min[hl][0]*Math.sin( m ), h >> 1 - min[hl][0]*Math.cos( m )];
+        mina[1] = [h >> 1 + min[handlen][0]*Math.sin( m ), h >> 1 - min[handlen][0]*Math.cos( m )];
         dc.drawLine(mina[0][0]+(w - h)/2, mina[0][1], mina[1][0]+(w - h)/2, mina[1][1]);
     }
 
@@ -217,21 +234,6 @@ class darktimesView extends Ui.WatchFace {
     function getSettings() {
         var settings = Sys.getDeviceSettings();
         is24 = settings.is24Hour;
-        // min, hour in cyl.coords
-        min = [ [ h >> 1 - 6, 0 ],
-                [ h >> 1 - 24, 0 ],
-                [ h >> 2, 0 ],
-                [ h >> 3, 0 ],
-                [ 0, 0 ],
-                [ -h >> 3, 0 ] ];
-        //min = toCyl(min, 6);
-        hour = [ [ h >> 1 - 24, 0 ],
-                [ h >> 1 - 36, 0 ],
-                [ h >> 2 - 14, 0 ],
-                [  h >> 3 - 14, 0 ],
-                [ 0, 0 ],
-                [ -h >> 4, 0 ] ];
-        //hour = toCyl(hour, 6);
 
         var app = App.getApp();
 
@@ -253,7 +255,7 @@ class darktimesView extends Ui.WatchFace {
         timedOff = app.getProperty("timedOff_prop");
         colonPos = app.getProperty("colonPos_prop");
         showAnalog = app.getProperty("analogShow_prop");
-        hl = app.getProperty("hl_prop");
+        //handlen = app.getProperty("hl_prop");
     }
 
     /* preparation for more advanced hands

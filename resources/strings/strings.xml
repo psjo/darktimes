@@ -5,7 +5,7 @@
 	<string id="batValueError">Between one (1) and one hundred (100), please</string>
 	<string id="timedValueError">Between zero (0) and twenty three (23), please</string>
 	<string id="colonValueError">Between zero (0) and forty six (46), please</string>
-	<string id="hlValueError">Between one (1) and five (5), please</string>
+	<string id="hlenValueError">Between one (1) and five (5), please</string>
 	<string id="colonPos">Vertical position of colon, 0 = bottom, 46 = top</string>
 	<string id="showCount">Show message/alarm count when awake</string>
 	<string id="showBat">Show battery status in sleep mode</string>
@@ -18,7 +18,7 @@
 	<string id="timedPrompt">..only works when asleep and background color is the same</string>
 	<string id="timedOn">Time to start showing the time in sleep mode, 0-23</string>
 	<string id="timedOff">Time to stop showing the time in sleep mode, 0-23</string>
-	<string id="hl">length of analog hands 1-5, 1=short, 4=center, 5+</string>
+	<string id="hlen">length of analog hands 1-5, 1=short, 4=center, 5+</string>
 	<string id="bgCol">Background color</string>
 	<string id="colPrompt">Pick a color</string>
 	<string id="timeOnCol">Color when awake (time/date)</string>
