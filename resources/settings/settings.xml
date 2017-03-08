@@ -190,6 +190,6 @@
 	</setting>
 	<setting propertyKey="@Properties.analogShow_prop" title="@Strings.showAnalog"
 		prompt="@Strings.analogPrompt">
-		<settingConfig type="boolean" />
+		<settingConfig type="numeric" min="0" max="5"/>
 	</setting>
 </settings>

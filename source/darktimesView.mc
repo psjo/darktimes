@@ -20,7 +20,7 @@ class darktimesView extends Ui.WatchFace {
     var showCount;
     var showBat;
     var showDate;
-    var showAnalog;
+    var showAnalog = 0;
     var timed = false;
     var batWarning = 15;
     var batWarningCol; // = Gfx.COLOR_PINK;
@@ -47,22 +47,9 @@ class darktimesView extends Ui.WatchFace {
     function onLayout(dc) {
         w = dc.getWidth();
         h = dc.getHeight();
+        min = [ h >> 1 - 6, h >> 1 - 24, h >> 1 - 36, h >> 2, 0, -30 ];
+        hour = [ h >> 1 - 24, h >> 1 - 36, h >> 1 - 48, h >> 2 - 18, 0, -20 ];
         timeFont = Ui.loadResource(Rez.Fonts.id_theFont);
-        // min, hour in cyl.coords
-        min = [ [ h >> 1 - 6, 0 ],
-                [ h >> 1 - 24, 0 ],
-                [ h >> 2, 0 ],
-                [ h >> 3, 0 ],
-                [ 0, 0 ],
-                [ -h >> 3, 0 ] ];
-        //min = toCyl(min, 6);
-        hour = [ [ h >> 1 - 24, 0 ],
-                [ h >> 1 - 36, 0 ],
-                [ h >> 2 - 14, 0 ],
-                [  h >> 3 - 14, 0 ],
-                [ 0, 0 ],
-                [ -h >> 4, 0 ] ];
-        //hour = toCyl(hour, 6);
     }
 
     function onShow() {
@@ -192,35 +179,31 @@ class darktimesView extends Ui.WatchFace {
     function drawAnalog(dc) {
 
         var now = Sys.getClockTime();
-        var mnt = now.min;
-        var hr = pid6*(now.hour % 12 + mnt/60.0);
-        mnt = pid6*mnt / 5.0;
-        var mina = new [2];
+        var m = now.min;
+        var hr = pid6*(now.hour % 12 + m/60.0);
+        m = pid6*m/5.0;
 
+        var r = h >> 1;
+
+        var x1 = r + hour[0]*Math.sin( hr );
+        var y1 = r - hour[0]*Math.cos( hr );
+        var x2 = r + hour[showAnalog]*Math.sin( hr );
+        var y2 = r - hour[showAnalog]*Math.cos( hr );
         dc.setPenWidth(4);
-
-        // hour
-        dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
-        //mina[0] = [h >> 1 + hour[0][0]*Math.sin(hour[0][1] + hr), h >> 1 - hour[0][0]*Math.cos(hour[0][1] + hr)];
-        //mina[1] = [h >> 1 + hour[handlen][0]*Math.sin(hour[handlen][1] + hr), h >> 1 - hour[handlen][0]*Math.cos(hour[handlen][1] + hr)];
-        mina[0] = [h >> 1 + hour[0][0]*Math.sin(hr), h >> 1 - hour[0][0]*Math.cos(hr)];
-        mina[1] = [h >> 1 + hour[1][0]*Math.sin(hr), h >> 1 - hour[1][0]*Math.cos(hr)];
-        //mina[1] = [h >> 1 + hour[handlen][0]*Math.sin(hr), h >> 1 - hour[handlen][0]*Math.cos(hr)];
-        dc.drawLine(mina[0][0]+(w-h)/2, mina[0][1], mina[1][0]+(w-h)/2, mina[1][1]);
-
+        dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+        dc.drawLine(x1 + (w - h) / 2, y1, x2 + (w - h) / 2, y2);
+        //mina = null;
         // minute
-        if (Sys.getDeviceSettings().notificationCount) {
-            dc.setColor(Gfx.COLOR_BLUE, -1);
+        x1 = r + min[0] * Math.sin( m );
+        y1 = r - min[0] * Math.cos( m );
+        x2 = r + min[showAnalog] * Math.sin( m );
+        y2 = r - min[showAnalog] * Math.cos( m );
+        if (Sys.getDeviceSettings().notificationCount > 0) {
+            dc.setColor(~Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
         } else {
-            dc.setColor(Gfx.COLOR_RED, -1);
+            dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
         }
-        //mina[0] = [h >> 1 + min[0][0]*Math.sin(min[0][1] + m), h >> 1 - min[0][0]*Math.cos(min[0][1] + m)];
-        //mina[1] = [h >> 1 + min[handlen][0]*Math.sin(min[handlen][1] + m), h >> 1 - min[handlen][0]*Math.cos(min[handlen][1] + m)];
-        mina[0] = [h >> 1 + min[0][0]*Math.sin( mnt ), h >> 1 - min[0][0]*Math.cos( mnt )];
-        mina[1] = [h >> 1 + min[1][0]*Math.sin( mnt ), h >> 1 - min[1][0]*Math.cos( mnt )];
-        //mina[1] = [h >> 1 + min[handlen][0]*Math.sin( m ), h >> 1 - min[handlen][0]*Math.cos( m )];
-        dc.drawLine(mina[0][0]+(w - h)/2, mina[0][1], mina[1][0]+(w - h)/2, mina[1][1]);
-
+        dc.drawLine(x1 + (w - h) / 2, y1, x2 + (w - h) / 2, y2);
     }
 
     function onHide() {
@@ -258,24 +241,6 @@ class darktimesView extends Ui.WatchFace {
         timedOn = app.getProperty("timedOn_prop");
         timedOff = app.getProperty("timedOff_prop");
         colonPos = app.getProperty("colonPos_prop");
-        showAnalog = app.getProperty("analogShow_prop");
-        //handlen = app.getProperty("hl_prop");
+        showAnalog = app.getProperty("analogShow_prop").toNumber();
     }
-
-    /* preparation for more advanced hands
-    function toCyl(pos, len) {
-        var r;
-        var a;
-        for (var i = 0; i < len; i += 1) {
-            r = Math.sqrt(Math.pow(pos[i][0], 2) + Math.pow(pos[i][1], 2));
-            a = Math.acos(pos[i][1]/r);
-            if (pos[i][0] < 0) {
-                pos[i] = [r, -a];
-            } else {
-                pos[i] = [r, a];
-            }
-        }
-        return pos;
-    }
-    */
 }
